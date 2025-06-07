@@ -31,4 +31,5 @@ def get_final_status():
         sid: info for sid, info in call_status_store.items()
         if info["status"] == "completed"
     }
+    print(f"[GET FINAL STATUS] Returning {len(final_statuses)} completed call(s)")
     return JSONResponse(content={"completed_calls": final_statuses})
